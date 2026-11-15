@@ -2,11 +2,12 @@ const express = require('express')
 
 //internal imporot
 const {getUsers} = require('../controller/usersController.js')
+const decorateHtmlResponse = require('../middlewares/common/decorateHtmlResponse.js')
 
 
 const router = express.Router();
 
 // login page
-router.get("/", getUsers)
+router.get("/", decorateHtmlResponse("Users"), getUsers)
 
 module.exports = router;
