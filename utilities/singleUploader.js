@@ -17,8 +17,8 @@ function uploader(
             cb(null, UPLOADS_FOLDER);
         },
         filename: (req, res, cb) => {
-            const fileExt = path.extname(fileLoader.orginalname);
-            const fileName = fileExt.orginalname
+            const fileExt = path.extname(fileLoader.originalname);
+            const fileName = fileExt.orig
                             .replace(fileExt, "")
                             .toLowerCase()
                             .split(" ")
